@@ -11,5 +11,5 @@ def execute(raw_params, filter_empty=True):
 
 
 if __name__ == '__main__':
-    raw_params = "1=1&currentPage=1&query.title=&query.cglb=&query.gglx=3&query.cgfs=&query.time_s=&query.time_e=&query.areacode=&query.endtime_s=&query.endtime_e="
+    raw_params = "f_noticeid=402848d365409df20165469f6783101b&xqType=cggg&type=1"
     print execute(raw_params)
