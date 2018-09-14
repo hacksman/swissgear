@@ -5,6 +5,7 @@
 import time
 import logging
 from functools import wraps
+from datetime import timedelta
 
 
 def run_time(logger=None):
@@ -14,8 +15,8 @@ def run_time(logger=None):
             start_time = time.time()
             func(*args, **kwargs)
             end_time = time.time()
-            # logger.info("{} 程序运行了 {} s".format(func.__name__, "%s" % round(end_time - start_time, 2)))
-            print ("{} 程序运行了 {} s".format(func.__name__, "%s" % round(end_time - start_time, 2)))
+            logger.info("{} 程序运行了 {} s".format(func.__name__, "%s" % timedelta(seconds=end_time - start_time)))
+            # print ("{} 程序运行了 {} s".format(func.__name__, "%s" % timedelta(seconds=end_time - start_time)))
         return wrapper
     return decorator
 
